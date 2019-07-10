@@ -1,0 +1,17 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/tgcdatabase?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: root
+  mvc:
+    view:
+      prefix: /webapp/WEB-INF/jsps/
+      suffix: .jsp
+
+mybatis:
+  mapper-locations: classpath*:/mapping/**Mapper.xml
+  type-aliases-package: com.tgc.oa.entity
+
