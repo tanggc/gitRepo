@@ -12,6 +12,10 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 
+/**
+ * @author yezi
+ * @date 2019/07/01
+ */
 @Aspect
 @Component
 public class AopPointcut {

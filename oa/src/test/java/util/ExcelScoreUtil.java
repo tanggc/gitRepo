@@ -22,14 +22,14 @@ public class ExcelScoreUtil {
     //定义文件的路径
     public static final String FILEPATH = "D:\\work\\score.xlsx";
     public static final Logger log = LoggerFactory.getLogger(ExcelScoreUtil.class);
-    public static final Double MORETHAN = 2.0;
+    public static final Double MORETHAN = 1.9;
     public static final Double LESSTHAN = 2.05;
 
 
     public static void main(String[] args) {
         try {
             FileInputStream fis = new FileInputStream(FILEPATH);
-            Workbook wb = null;
+            Workbook wb;
 
             if(FILEPATH.toLowerCase().endsWith("xls")) {
                 wb = new HSSFWorkbook(fis);
@@ -51,7 +51,7 @@ public class ExcelScoreUtil {
      * @param workbook
      */
     public static void readExcel(Workbook workbook){
-        Sheet sheet = workbook.getSheetAt(8);
+        Sheet sheet = workbook.getSheetAt(5);
         Row hssfRow=sheet.getRow(2);
         //得到表格的行数
         int rowNumber = sheet.getPhysicalNumberOfRows();
@@ -171,8 +171,8 @@ public class ExcelScoreUtil {
      * @return
      */
     public static String recommendOption(int probability){
-        Double probabity,times,odds, a0 , a1 = 0.0;
-        String result = null;
+        double probabity,times,odds, a0 , a1;
+        String result;
         odds = (MORETHAN + LESSTHAN) / 2;
         times = odds - 1;
         probabity = Double.valueOf(probability) /100;
