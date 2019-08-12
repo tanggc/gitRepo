@@ -22,7 +22,7 @@ public class ExcelScoreUtil {
     //定义文件的路径
     public static final String FILEPATH = "E:\\work\\score.xlsx";
     public static final Logger log = LoggerFactory.getLogger(ExcelScoreUtil.class);
-    public static final Double MORETHAN = 2.01;
+    public static final Double MORETHAN = 1.88;
     public static final Double LESSTHAN = 2.05;
 
 
