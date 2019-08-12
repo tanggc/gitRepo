@@ -23,7 +23,7 @@ public class ExcelScoreUtil {
     public static final String FILEPATH = "E:\\work\\score.xlsx";
     public static final Logger log = LoggerFactory.getLogger(ExcelScoreUtil.class);
     public static final Double MORETHAN = 1.85;
-    public static final Double LESSTHAN = 1.89;
+    public static final Double LESSTHAN = 2.89;
 
 
     public static void main(String[] args) {
