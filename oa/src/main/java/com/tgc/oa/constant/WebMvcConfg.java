@@ -8,7 +8,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class WebMvcConfg implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(new LoginInterceptor()).addPathPatterns("/**").
-                excludePathPatterns("/to_login","/login","/assets/**","/js/**","/vendor/**");
+        //registry.addInterceptor(new LoginInterceptor()).addPathPatterns("/**").
+                //excludePathPatterns("/to_login","/login","/assets/**","/js/**","/vendor/**");
     }
 }

@@ -226,7 +226,7 @@ public class ExcelScoreUtil {
      * @param lessthan 所选赔率小于此值
      */
     public static Map<Double,Double> selectData(Map<Double,Double> dataSourceMap,Double movethan, Double lessthan){
-        Map<Double,Double> selectMap = new HashMap<Double, Double>();
+        Map<Double,Double> selectMap = new HashMap<>();
         for (Map.Entry<Double, Double> entry : dataSourceMap.entrySet()){
             if(movethan <= entry.getKey() && entry.getKey() <= lessthan){
                 selectMap.put(entry.getKey(),entry.getValue());
